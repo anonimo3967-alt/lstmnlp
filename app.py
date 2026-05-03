@@ -243,7 +243,7 @@ with tab1:
 # ── Tab 2: Comparar temperaturas ──────────────────────────────────────────────
 with tab2:
     st.markdown("### Comparacion de valores modulares de revolución neuronal")
-    st.markdown("Genera el mismo texto con 5 <b>revoluciones</b> distintas para ver el efecto.")
+    st.markdown("Genera el mismo texto con 5 <b>revoluciones</b> ay no... porque el b no funciono? distintas para ver el efecto.")
 
     compare_seed = st.text_input("Semilla:", value="No... me acuerdo")
     n_cmp = st.slider("Longitud", 50, 200, 100, key="ncmp")
