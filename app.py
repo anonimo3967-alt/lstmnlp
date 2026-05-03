@@ -289,15 +289,16 @@ with tab3:
 
     with st.expander("Que es Neon White?", expanded=True):
         st.markdown("""
-Es un juego increible sobre hacer speedrun de niveles en el cielo, esta es la intro oficial:
+            Es un juego increible sobre hacer speedrun de niveles en el cielo, esta es la intro oficial:
 
-We're called neons, sinners plugged from hell to do God's dirty work
-But I'm finding hard to believe we're in heaven
-Old friends, ex lovers
-Only one of us can stay in heaven and I've got a score to settle
+            We're called neons, sinners plugged from hell to do God's dirty work
+            But I'm finding hard to believe we're in heaven
+            Old friends, ex lovers
+            Only one of us can stay in heaven and I've got a score to settle
 
+        """)
 
     with st.expander("Cuanto vale?"):
         st.markdown("""
-Vale $24.99 dolares en steam, pero lo dieron gratis en ps plus
+            Vale $24.99 dolares en steam, pero lo dieron gratis en ps plus
                     """)
