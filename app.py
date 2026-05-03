@@ -118,28 +118,30 @@ with st.sidebar:
     temperature = st.slider(
         "Modulo de revolución neuronal", min_value=0.1, max_value=2.0,
         value=0.8, step=0.05,
-        help="Bajo = conservador | Alto = creativo/caotico"
+        help="Bajo = muy frío 🥶❄️ | Alto = Broooo super creativo/caotico 🔥🔥"
     )
 
     if temperature < 0.5:
-        st.caption("Frio: texto conservador y repetitivo")
+        st.caption("Frio: muy frío bro 🥶❄️")
     elif temperature < 1.0:
         st.caption("Templado: balance coherencia / variedad")
     elif temperature < 1.4:
-        st.caption("Caliente: texto mas creativo")
+        st.caption("Caliente: Broooo the machine is on fire 🔥🔥")
     else:
-        st.caption("Muy caliente: puede inventar palabras")
+        st.caption("Muy caliente: va a explotar 💀💀💀💀")
 
-    n_chars = st.slider("Longitud del texto", 50, 500, 200, 50)
+    st.text("El modulo de longitud determina que tan largo es el texto, en unidad de palabras per palabras")
+
+    n_chars = st.slider("Modulo de longitud", 50, 500, 200, 50)
 
     st.markdown("---")
     st.markdown("### Semillas predefinidas")
     seeds = [
-        "en un lugar de la mancha",
+        "No me acuerdo de ese nombre...",
         "el caballero miro al horizonte",
-        "sancho panza respondio",
-        "con estas razones perdia",
-        "el hidalgo tomo la espada",
+        "sancho panza",
+        "Se volvio lokooo",
+        "Y Jesus dijo...",
     ]
     selected_seed = st.selectbox("Elige una semilla:", ["(personalizada)"] + seeds)
 
