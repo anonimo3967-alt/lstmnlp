@@ -25,7 +25,7 @@ st.markdown("""
     }
     .subtitle { color: #6c757d; font-size: 1rem; }
     .generated-text {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background: #f7e1dc;
         border-radius: 12px; padding: 1.5rem;
         font-family: Garamond, serif; font-size: 1.05rem;
         line-height: 1.8; color: #2c3e50;
