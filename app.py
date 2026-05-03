@@ -158,6 +158,8 @@ st.markdown('<h1 class="main-title">Modulo de interfaz neuronal</h1>', unsafe_al
 st.markdown('<p class="subtitle">Este modulo permite interactuar con la red neuronal de forma amigable</p>', unsafe_allow_html=True)
 st.markdown("---")
 
+st.image("Neon_white.avif")
+
 tab1, tab2, tab3 = st.tabs(["Generar Texto", "Modulo de revolución neuronal", "Neon white"])
 
 # ── Tab 1: Generar ────────────────────────────────────────────────────────────
