@@ -32,7 +32,7 @@ st.markdown("""
         border-left: 5px solid #667eea; min-height: 120px;
     }
     .info-box {
-        background: #e8f4f8; border-radius: 8px; padding: 1rem;
+        background: #f7e1dc; border-radius: 8px; padding: 1rem;
         border: 1px solid #bee3f8; font-size: 0.9rem;
     }
 </style>
