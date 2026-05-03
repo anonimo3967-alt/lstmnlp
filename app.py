@@ -105,16 +105,18 @@ def generate_full_text(model, seed_text, char_to_idx, idx_to_char,
 with st.sidebar:
     st.markdown("## Fase de preparación")
     st.markdown("---")
-    st.markdown("### Inserta el modulo principal del modelo: keras")
+    st.markdown("### Inserta el modulo principal neuronal del modelo")
 
-    model_file    = st.file_uploader("Modelo (.keras o .h5)", type=["keras", "h5"])
-    metadata_file = st.file_uploader("Metadatos (.json)",    type=["json"])
+    model_file    = st.file_uploader("Aquí el modulo principal neuronal (.keras o .h5)", type=["keras", "h5"])
+    metadata_file = st.file_uploader("Aquí el modulo auxiliar secundario (.json)",    type=["json"])
 
     st.markdown("---")
-    st.markdown("### Parametros de Generacion")
+    st.markdown("### Ajustes de modulos estacionales")
+
+    st.text("El modulo de revolución neuronal ajusta el balance entre creatividad/precisión de tu modelo. En otros terminos, quizas se le podria llamar temperatura...")
 
     temperature = st.slider(
-        "Temperatura", min_value=0.1, max_value=2.0,
+        "Modulo de revolución neuronal", min_value=0.1, max_value=2.0,
         value=0.8, step=0.05,
         help="Bajo = conservador | Alto = creativo/caotico"
     )
