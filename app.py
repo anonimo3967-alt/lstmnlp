@@ -103,9 +103,9 @@ def generate_full_text(model, seed_text, char_to_idx, idx_to_char,
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 
 with st.sidebar:
-    st.markdown("## Configuracion")
+    st.markdown("## Fase de preparación")
     st.markdown("---")
-    st.markdown("### Cargar Modelo")
+    st.markdown("### Inserta el modulo principal del modelo: keras")
 
     model_file    = st.file_uploader("Modelo (.keras o .h5)", type=["keras", "h5"])
     metadata_file = st.file_uploader("Metadatos (.json)",    type=["json"])
