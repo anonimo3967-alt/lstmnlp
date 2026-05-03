@@ -154,11 +154,11 @@ with st.sidebar:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-st.markdown('<h1 class="main-title">Generador de Texto LSTM</h1>', unsafe_allow_html=True)
-st.markdown('<p class="subtitle">Redes Neuronales Recurrentes · Agentes de IA e Interfaces Multimodales</p>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title">Modulo de interfaz neuronal</h1>', unsafe_allow_html=True)
+st.markdown('<p class="subtitle">Este modulo permite interactuar con la red neuronal de forma amigable</p>', unsafe_allow_html=True)
 st.markdown("---")
 
-tab1, tab2, tab3 = st.tabs(["Generar Texto", "Explorar Temperatura", "Teoria"])
+tab1, tab2, tab3 = st.tabs(["Generar Texto", "Modulo de revolución neuronal", "Neon white"])
 
 # ── Tab 1: Generar ────────────────────────────────────────────────────────────
 with tab1:
@@ -168,9 +168,9 @@ with tab1:
         st.markdown("### Texto Semilla")
         default = selected_seed if selected_seed != "(personalizada)" else ""
         seed_input = st.text_area(
-            "Escribe el inicio del texto:",
+            "Inserta en este modulo el inicio del texto a ser generado:",
             value=default, height=100,
-            placeholder="Ejemplo: en un lugar de la mancha...",
+            placeholder="Ejemplo: Y Sancho Panza dijo...",
         )
         gen_btn = st.button("Generar Texto", type="primary", use_container_width=True)
 
@@ -184,7 +184,7 @@ with tab1:
         st.markdown("### Texto Generado")
         output = st.empty()
         output.markdown(
-            '<div class="generated-text"><em style="color:#aaa">El texto aparecera aqui...</em></div>',
+            '<div class="generated-text"><em style="color:#262626">El texto aparecera aqui...</em></div>',
             unsafe_allow_html=True
         )
 
