@@ -222,9 +222,9 @@ with tab1:
                 )
 
                 m1, m2, m3 = st.columns(3)
-                m1.metric("Caracteres generados", len(texto))
-                m2.metric("Temperatura", f"{temperature:.2f}")
-                m3.metric("Palabras aprox.", len(texto.split()))
+                m1.metric("Modulo de longitud... creo", len(texto))
+                m2.metric("Modulo de revolución neuronal", f"{temperature:.2f}")
+                m3.metric("Modulo de longitud again", len(texto.split()))
         else:
             # Demo sin modelo
             st.info("Modo Demo - carga tu modelo para generacion real")
@@ -242,12 +242,12 @@ with tab1:
 
 # ── Tab 2: Comparar temperaturas ──────────────────────────────────────────────
 with tab2:
-    st.markdown("### Comparacion de Temperaturas")
-    st.markdown("Genera el mismo texto con 5 temperaturas distintas para ver el efecto.")
+    st.markdown("### Comparacion de valores modulares de revolución neuronal")
+    st.markdown("Genera el mismo texto con 5 <b>revoluciones</b> distintas para ver el efecto.")
 
-    compare_seed = st.text_input("Semilla:", value="en un lugar de la mancha de cuyo nombre")
+    compare_seed = st.text_input("Semilla:", value="No... me acuerdo")
     n_cmp = st.slider("Longitud", 50, 200, 100, key="ncmp")
-    cmp_btn = st.button("Comparar", type="primary")
+    cmp_btn = st.button("Activar modulo: comparar", type="primary")
 
     if cmp_btn and model_file and metadata_file:
         ext = "keras" if model_file.name.endswith(".keras") else "h5"
@@ -285,53 +285,19 @@ with tab2:
 
 # ── Tab 3: Teoria ─────────────────────────────────────────────────────────────
 with tab3:
-    st.markdown("### Fundamentos Teoricos")
+    st.markdown("### Neon white")
 
-    with st.expander("Que es una RNN?", expanded=True):
+    with st.expander("Que es Neon White?", expanded=True):
         st.markdown("""
-Una **Red Neuronal Recurrente** mantiene un estado oculto que actua como memoria:
+Es un juego increible sobre hacer speedrun de niveles en el cielo, esta es la intro oficial:
 
-```
-h_t = tanh(W_h * h_{t-1} + W_x * x_t + b)
-```
+We're called neons, sinners plugged from hell to do God's dirty work
+But I'm finding hard to believe we're in heaven
+Old friends, ex lovers
+Only one of us can stay in heaven and I've got a score to settle
 
-Problema: los gradientes se multiplican en cada paso y desaparecen
-si son menores a 1 (vanishing gradient).""")
 
-    with st.expander("Por que LSTM resuelve el vanishing gradient?"):
+    with st.expander("Cuanto vale?"):
         st.markdown("""
-La LSTM introduce tres puertas y un estado de celda `C_t`:
-
-| Puerta | Funcion |
-|--------|---------|
-| Forget | Que olvidar del pasado? |
-| Input  | Que nueva info guardar? |
-| Output | Que parte del estado exponer? |
-
-El estado `C_t` actua como una cinta transportadora:
-el gradiente fluye sin interrupciones a traves del tiempo.""")
-
-    with st.expander("Como funciona la temperatura?"):
-        st.markdown("""
-```
-p_i = exp(log(p_i) / T) / sum(exp(log(p_j) / T))
-```
-
-- **T < 1.0:** distribucion aguda, elige siempre lo mas probable
-- **T = 1.0:** distribucion original del modelo
-- **T > 1.0:** distribucion plana, mayor variedad y riesgo""")
-
-    with st.expander("RNN vs LSTM vs GRU"):
-        st.markdown("""
-| | RNN | LSTM | GRU |
-|---|---|---|---|
-| Memoria larga | Pobre | Excelente | Buena |
-| Velocidad CPU | Rapida | Lenta | Media |
-| Parametros | Pocos | Muchos | Moderados |""")
-
-st.markdown("---")
-st.markdown(
-    "<div style='text-align:center; color:#aaa; font-size:0.8rem;'>"
-    "Generador LSTM - Agentes de IA e Interfaces Multimodales</div>",
-    unsafe_allow_html=True
-)
+Vale $24.99 dolares en steam, pero lo dieron gratis en ps plus
+                    """)
