@@ -20,7 +20,7 @@ st.markdown("""
 <style>
     .main-title {
         font-size: 2.2rem; font-weight: 700;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #c74528 0%, #28acc7 100%);
         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .subtitle { color: #6c757d; font-size: 1rem; }
