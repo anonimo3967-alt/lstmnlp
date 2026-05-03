@@ -27,7 +27,7 @@ st.markdown("""
     .generated-text {
         background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         border-radius: 12px; padding: 1.5rem;
-        font-family: Georgia, serif; font-size: 1.05rem;
+        font-family: Garamond, serif; font-size: 1.05rem;
         line-height: 1.8; color: #2c3e50;
         border-left: 5px solid #667eea; min-height: 120px;
     }
